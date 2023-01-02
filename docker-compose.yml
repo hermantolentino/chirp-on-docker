@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  chirp:
+    hostname: chirp
+    build:
+      context: .
+      dockerfile: Dockerfile.debian
+      args:
+        TARBALL: chirp-daily-20221217.tar.gz
+    image: chirp
+    container_name: chirp
+    volumes:
+      - $HOME/.Xauthority:/home/chirp/.Xauthority
+      - $PWD:/home/chirp
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    environment:
+      #TARBALL: chirp-daily-20221217.tar.gz
+      DISPLAY: $DISPLAY
+    devices:
+      - "/dev/ttyUSB0:/dev/ttyUSB0"
+    network_mode: "host"
+    command: >
+      /usr/local/chirp/chirpw
