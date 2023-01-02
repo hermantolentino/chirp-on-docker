@@ -9,9 +9,9 @@ WORKDIR /usr/local
 RUN wget "https://trac.chirp.danplanet.com/chirp_daily/LATEST/SHA1SUM"
 RUN wget "https://trac.chirp.danplanet.com/chirp_daily/LATEST/$TARBALL"
 RUN sha1sum -c --ignore-missing SHA1SUM | grep $TARBALL | grep OK 
-RUN mkdir /usr/local/chirp
-RUN tar -C /usr/local/chirp --strip-components 1 -xvzf $TARBALL
+RUN mkdir /usr/local/bin/chirp
+RUN tar -C /usr/local/bin/chirp --strip-components 1 -xvzf $TARBALL
 RUN rm $TARBALL
 USER chirp
 WORKDIR /home/chirp
-ENTRYPOINT /usr/local/chirp/chirpw
+ENTRYPOINT /usr/local/bin/chirp/chirpw
