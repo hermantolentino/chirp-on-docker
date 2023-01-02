@@ -1,17 +1,21 @@
 FROM debian:stretch-slim
-ARG TARBALL
-RUN useradd -md /home/chirp chirp
-RUN usermod -aG dialout chirp
+ARG INSTALL_USER
+ARG VERSION
+ENV TARBALL "chirp-daily-${VERSION}.tar.gz"
+
+RUN echo 'Using ${TARBALL}'
+RUN useradd -md /home/${INSTALL_USER} ${INSTALL_USER}
+RUN usermod -aG dialout ${INSTALL_USER}
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update
 RUN apt-get install -y python-serial python-libxml2 python-future python-gtk2 libcanberra-gtk-module wget
 WORKDIR /usr/local
 RUN wget "https://trac.chirp.danplanet.com/chirp_daily/LATEST/SHA1SUM"
-RUN wget "https://trac.chirp.danplanet.com/chirp_daily/LATEST/$TARBALL"
-RUN sha1sum -c --ignore-missing SHA1SUM | grep $TARBALL | grep OK 
+RUN wget "https://trac.chirp.danplanet.com/chirp_daily/LATEST/${TARBALL}"
+RUN sha1sum -c --ignore-missing SHA1SUM | grep ${TARBALL} | grep OK 
 RUN mkdir /usr/local/bin/chirp
-RUN tar -C /usr/local/bin/chirp --strip-components 1 -xvzf $TARBALL
-RUN rm $TARBALL
-USER chirp
-WORKDIR /home/chirp
+RUN tar -C /usr/local/bin/chirp --strip-components 1 -xvzf ${TARBALL}
+RUN rm ${TARBALL}
+USER ${INSTALL_USER}
+WORKDIR /home/${INSTALL_USER}
 ENTRYPOINT /usr/local/bin/chirp/chirpw

@@ -7,15 +7,17 @@ services:
       context: .
       dockerfile: Dockerfile.debian
       args:
-        TARBALL: chirp-daily-20221217.tar.gz
+        VERSION: "20221217"
+        INSTALL_USER: "chirp"
     image: chirp
+    env_file:
+      - .env
     container_name: chirp
     volumes:
       - $HOME/.Xauthority:/home/chirp/.Xauthority
       - $PWD:/home/chirp
       - /tmp/.X11-unix:/tmp/.X11-unix
     environment:
-      #TARBALL: chirp-daily-20221217.tar.gz
       DISPLAY: $DISPLAY
     devices:
       - "/dev/ttyUSB0:/dev/ttyUSB0"
