@@ -10,8 +10,6 @@ services:
         VERSION: "20221217"
         INSTALL_USER: "chirp"
     image: chirp
-    env_file:
-      - .env
     container_name: chirp
     volumes:
       - $HOME/.Xauthority:/home/chirp/.Xauthority
