@@ -22,20 +22,25 @@ Linux machine set up:
 3. Docker:  
    3.1 Docker version 20.10.22, build 3a2c30b  
    3.2 docker-compose version 1.25.5, build 8a1c60f6
-4. Code editor: Visual Studio Code Version: 1.74.2
+4. Code editor: Visual Studio Code Version: 1.74.2 (Figure 1)
 5. Programming cables used:  
    5.1 Baofeng HTs: https://a.co/d/iVTwtpD  
    5.2 BTECH GMRS 50X1: https://a.co/d/dBGAPnp
+
+Figure 1. Visual Studio Code provides a "one-stop shop" for managing code and docker containers.
+
+<img src="./images/visual-studio-code.png" alt="Visual Studio Code on Linux" title="Visual Studio Code" height="600"/>
+
 
 Updating Linux firmware to detect FTDI chip in the programming cable:
 1. Type `lsusb` in the Terminal app. Insert the programming cable in a USB port and type `lsusb` again. If there are no new devices added to the list proceed to #2.
 2. Update software - `sudo apt get update` then `sudo apt get upgrade`. The `linux-firmware` package will be upgraded if the installed OS does not have the FTDI drivers.
 3. After update, type `lsusb` again. You should now see the list with the new device listed.
 
-Lauching `chirp-on-docker`:
+Launching `chirp-on-docker`:
 1. To build the docker image `chirp`: Run the bash script `build_chirp.sh` in the Terminal app.
-2. To launch `chirp-on-docker`: Run the bash script `start_chirp.sh` in the Terminal app. Before launching, make sure your radio with the programming cable is plugged in to the machine's USB port.
+2. To launch `chirp-on-docker`: Run the bash script `start_chirp.sh` in the Terminal app. Before launching, make sure your radio with the programming cable is plugged in to the machine's USB port. (Figure 2)
 
-Figure 1. `chirp-on-docker`
+Figure 2. `chirp-on-docker` after launch
 
 <img src="./images/chirp-on-docker.png" alt="chirp-on-docker" title="chirp-on-docker" height="600"/>
