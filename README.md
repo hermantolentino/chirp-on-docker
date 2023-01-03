@@ -38,4 +38,4 @@ Lauching `chirp-on-docker`:
 
 Figure 1. `chirp-on-docker`
 
-![chirp-on-docker](./images/chirp-on-docker.png){ width=60%,height:30px }
+![chirp-on-docker](./images/chirp-on-docker.png)
