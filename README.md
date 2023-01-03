@@ -8,7 +8,7 @@ Reference work:
 
 My set up:
 1. Machine: Intel® Core™ i5-6600K CPU @ 3.50GHz × 4 64GB RAM 4TB HD 
-2. OS: Ubuntu 22.04 LTS (machine)
+2. OS: Ubuntu 22.04 LTS, Budgie Desktop Environment
 3. Docker:  
    3.a Docker version 20.10.22, build 3a2c30b  
    3.b docker-compose version 1.25.5, build 8a1c60f6
