@@ -21,4 +21,4 @@ services:
       - "/dev/ttyUSB0:/dev/ttyUSB0"
     network_mode: "host"
     command: >
-      /usr/local/chirp/chirpw
+      /usr/local/bin/chirp/chirpw
