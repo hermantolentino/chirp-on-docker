@@ -6,6 +6,11 @@ Reference work:
 1. Here: https://github.com/linuxluser/docker-chirp
 2. And here: https://github.com/mpaolino/docker-chirp
 
+Why use Docker:
+1. CHIRP uses Python 2 which is deprecated in newer distributions of Ubuntu.
+2. Enables self-contained development environment for safely adding older Ubuntu packages for CHIRP without messing with current machine set up
+
+
 My set up:
 1. Machine: Intel® Core™ i5-6600K CPU @ 3.50GHz × 4 64GB RAM 4TB HD 
 2. OS: Ubuntu 22.04 LTS, Budgie Desktop Environment
