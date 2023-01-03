@@ -11,7 +11,7 @@ Why use Docker:
 2. Enables self-contained development environment for safely adding older Ubuntu packages for CHIRP without messing with current machine set up
 
 
-My set up:
+Linux machine set up:
 1. Machine: Intel® Core™ i5-6600K CPU @ 3.50GHz × 4 64GB RAM 4TB HD 
 2. OS: Ubuntu 22.04 LTS, Budgie Desktop Environment
 3. Docker:  
