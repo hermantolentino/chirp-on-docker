@@ -24,7 +24,7 @@ Linux machine set up:
    3.2 docker-compose version 1.25.5, build 8a1c60f6
 4. Code editor: Visual Studio Code Version: 1.74.2
 5. Programming cables used:  
-   5.1 Baofeng HTs: https://a.co/d/iVTwtpD
+   5.1 Baofeng HTs: https://a.co/d/iVTwtpD  
    5.2 BTECH GMRS 50X1: https://a.co/d/dBGAPnp
 
 Updating Linux firmware to detect FTDI chip in the programming cable:
@@ -34,8 +34,8 @@ Updating Linux firmware to detect FTDI chip in the programming cable:
 
 Lauching `chirp-on-docker`:
 1. To build the docker image `chirp`: Run the bash script `build_chirp.sh` in the Terminal app.
-2. To launch `chirp-on-docker`: Run the bash script `start_chirp.sh` in the Terminal app.
+2. To launch `chirp-on-docker`: Run the bash script `start_chirp.sh` in the Terminal app. Before launching, make sure your radio with the programming cable is plugged in to the machine's USB port.
 
 Figure 1. `chirp-on-docker`
 
-![chirp-on-docker](./images/chirp-on-docker.png)
+<img src="./images/chirp-on-docker.png" alt="chirp-on-docker" title="chirp-on-docker" height="600"/>
