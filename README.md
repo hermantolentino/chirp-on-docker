@@ -38,8 +38,9 @@ Updating Linux firmware to detect FTDI chip in the programming cable:
 3. After update, type `lsusb` again. You should now see the list with the new device listed.
 
 Launching `chirp-on-docker`:
-1. To build the docker image `chirp`: Run the bash script `build_chirp.sh` in the Terminal app.
-2. To launch `chirp-on-docker`: Run the bash script `start_chirp.sh` in the Terminal app. Before launching, make sure your radio with the programming cable is plugged in to the machine's USB port. (Figure 2)
+1. Clone (`git clone`) this repository.   
+2. To build the docker image `chirp`: Run the bash script `build_chirp.sh` in the Terminal app.  
+3. To launch `chirp-on-docker`: Run the bash script `start_chirp.sh` in the Terminal app. Before launching, make sure your radio with the programming cable is plugged in to the machine's USB port. (Figure 2)
 
 Figure 2. `chirp-on-docker` after launch
 
