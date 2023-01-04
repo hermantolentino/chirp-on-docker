@@ -6,6 +6,11 @@ Reference work:
 1. Here: https://github.com/linuxluser/docker-chirp
 2. And here: https://github.com/mpaolino/docker-chirp
 
+Modifications to reference work:
+1. Added docker-compose YAML
+2. Improved the Docker file
+3. Tested `chirp-on-docker` on a few radios (see below)
+
 Why use Docker:
 1. CHIRP uses Python 2 which is deprecated in newer distributions of Ubuntu.
 2. Enables self-contained development environment for working with older Linux (Debian) packages supporting CHIRP software without messing with current machine set up
