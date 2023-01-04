@@ -40,8 +40,15 @@ Updating Linux firmware to detect FTDI chip in the programming cable:
 Launching `chirp-on-docker`:
 1. Clone (`git clone`) this repository.   
 2. To build the docker image `chirp`: Run the bash script `build_chirp.sh` in the Terminal app.  
-3. To launch `chirp-on-docker`: Run the bash script `start_chirp.sh` in the Terminal app. Before launching, make sure your radio with the programming cable is plugged in to the machine's USB port. (Figure 2)
+3. To launch `chirp-on-docker`: Run the bash script `start_chirp.sh` in the Terminal app. Before launching, make sure your radio with the programming cable is plugged in to the machine's USB port. (Figure 2). Follow the instructions in the CHIRP software. Data downloaded from the radio should look like Figure 3.
+4. Request a radio check on your favorite programmed repeater channel.
 
 Figure 2. `chirp-on-docker` after launch
 
 <img src="./images/chirp-on-docker.png" alt="chirp-on-docker" title="chirp-on-docker" height="600"/>
+
+Figure 3. `chirp-on-docker` with data downloaded from a programmed Baofeng UV9G. Note programmed DIY channels featuring repeaters from the North Georgia GMRS Network.
+
+<img src="./images/chirp-with-data.png" alt="chirp-with-data" title="chirp-with-data" height="600"/>
+
+If you used `chirp-on-docker` and think it's useful or have a question, send me a shout out on one of the North Georgia GMRS Network repeater channels (my Tac Number is Atlanta1205).
