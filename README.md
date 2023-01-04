@@ -9,7 +9,7 @@ Reference work:
 Modifications to reference work:
 1. Added docker-compose YAML
 2. Improved the Docker file
-3. Tested `chirp-on-docker` on a few radios (see below)
+3. Tested `chirp-on-docker` on a few radios and programming cables (see below)
 
 Why use Docker:
 1. CHIRP uses Python 2 which is deprecated in newer distributions of Ubuntu.
