@@ -17,9 +17,10 @@ Why use Docker:
 3. Easily update CHIRP software by changing the VERSION parameter in the docker-compose YAML file.
 
 Test radios:
-1. Baofeng UV-9G (handheld transceiver) - https://a.co/d/2yVJyV1
-2. Baofeng GMRS-9R (handheld transceiver) - https://a.co/d/hjNpcNf
-3. BTECH GMRS 50X1 (mobile transceiver) - https://a.co/d/2jHZdSZ
+1. Baofeng UV-9G (5w handheld transceiver) - https://a.co/d/2yVJyV1
+2. Baofeng GMRS-9R (5w handheld transceiver) - https://a.co/d/hjNpcNf
+3. BTECH GMRS 50X1 (50w mobile transceiver) - https://a.co/d/2jHZdSZ
+4. Radioddity DB25-G (25w mobile transceiver) - https://a.co/d/9w2mipy
 
 Linux machine set up:
 1. Machine: Intel® Core™ i5-6600K CPU @ 3.50GHz × 4 64GB RAM 4TB HD 
@@ -29,8 +30,8 @@ Linux machine set up:
    3.2 docker-compose version 1.25.5, build 8a1c60f6
 4. Code editor: Visual Studio Code Version: 1.74.2 (Figure 1)
 5. Programming cables used:  
-   5.1 Baofeng HTs: https://a.co/d/iVTwtpD  
-   5.2 BTECH GMRS 50X1: https://a.co/d/dBGAPnp
+   5.1 For Baofeng HTs: https://a.co/d/iVTwtpD  
+   5.2 For BTECH GMRS 50X1, Radioddity DB25-G: https://a.co/d/dBGAPnp
 
 Figure 1. Visual Studio Code provides a "one-stop shop" for managing code and docker containers.
 
