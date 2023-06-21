@@ -2,13 +2,17 @@ version: "3"
 
 services:
   chirp:
+    env_file: .env
     hostname: chirp
     build:
       context: .
       dockerfile: Dockerfile.debian
+      labels:
+        # workaround around a docker-compose bug when image is also used by docker run (https://github.com/docker/compose/issues/10162)
+        com.docker.compose.container-number: "1"
       args:
-        VERSION: "20221217"
-        INSTALL_USER: "chirp"
+        VERSION: $VERSION
+        INSTALL_USER: $INSTALL_USER
     image: chirp
     container_name: chirp
     volumes:
@@ -21,4 +25,4 @@ services:
       - "/dev/ttyUSB0:/dev/ttyUSB0"
     network_mode: "host"
     command: >
-      /usr/local/bin/chirp/chirpw
+      /usr/local/bin/chirp
